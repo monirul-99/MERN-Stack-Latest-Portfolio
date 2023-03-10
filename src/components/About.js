@@ -16,17 +16,29 @@ const About = () => {
   return (
     <section id="about" className="section" ref={ref}>
       <div className="container mx-auto">
-        <div>
+        <div className="flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen">
           {/* img area */}
-          <div className="flex-1 bg-about bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top"></div>
+          <motion.div
+            variants={fadeIn("right", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.3 }}
+            className="flex-1 bg-about bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top"
+          ></motion.div>
           {/* text area */}
-          <div>
-            <h2>About me.</h2>
-            <h3>
+          <motion.div
+            variants={fadeIn("left", 0.5)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.3 }}
+            className="flex-1"
+          >
+            <h2 className="h2 text-accent">About me.</h2>
+            <h3 className="h3 mb-4">
               I am a quick learner and am always eager to expand my skill set
               and stay up-to-date with the latest technologies.{" "}
             </h3>
-            <p>
+            <p className="mb-6">
               I have experience building web applications using the MERN stack,
               including knowledge of MongoDB, Express.js, React.js Redux JS, and
               Node.js. I also have a strong understanding of front-end
@@ -64,7 +76,15 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </div>
+
+            <div className="flex gap-x-8 items-center">
+              <button className="btn btn-lg">Contact me</button>
+              <a href="#" className="text-gradient text-link">
+                {" "}
+                My Portfolio
+              </a>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
