@@ -8,13 +8,14 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 //variants
 import { fadeIn } from "../variants";
+import { Link } from "react-scroll";
 
 const About = () => {
   const [ref, inView] = useInView({
     threshold: 0.5,
   });
   return (
-    <section id="about" className="section" ref={ref}>
+    <section id="about" className="section mb-24 lg:mb-0" ref={ref}>
       <div className="container mx-auto">
         <div className="flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen">
           {/* img area */}
@@ -33,23 +34,24 @@ const About = () => {
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1"
           >
-            <h2 className="h2 text-accent">About me.</h2>
-            <h3 className="h3 mb-4">
-              I am a quick learner and am always eager to expand my skill set
-              and stay up-to-date with the latest technologies.{" "}
-            </h3>
-            <p className="mb-6">
+            <h2 className="h2 text-accent">About me</h2>
+            <h3 className="font-primary tracking-wide font-semibold text-[16px] leading-[30px] mb-6">
               I have experience building web applications using the MERN stack,
               including knowledge of MongoDB, Express.js, React.js Redux JS, and
-              Node.js. I also have a strong understanding of front-end
-              technologies such as JavaScript, HTML, and CSS.
+              Node.js.
+            </h3>
+            <p className="mb-10">
+              I am a quick learner and am always eager to expand my skill set
+              and stay up-to-date with the latest technologies. I have a strong
+              understanding of front-end technologies such as JavaScript, HTML,
+              and CSS.
             </p>
 
             {/* state */}
-            <div className="flex gap-x-6 lg:ga-x-10 mb-12">
+            <div className="flex justify-between mb-12">
               <div>
                 <div className="text-[40px] font-tertiary text-gradient mb-2">
-                  {inView ? <CountUp start={0} end={13} duration={3} /> : null}
+                  0{inView ? <CountUp start={0} end={1} duration={3} /> : null}
                 </div>
                 <div className="font-primary text-sm tracking-[2px]">
                   Years of <br /> Experience
@@ -58,8 +60,7 @@ const About = () => {
 
               <div>
                 <div className="text-[40px] font-tertiary text-gradient mb-2">
-                  {inView ? <CountUp start={0} end={50} duration={3} /> : null}
-                  +k
+                  {inView ? <CountUp start={0} end={70} duration={3} /> : null}+
                 </div>
                 <div className="font-primary text-sm tracking-[2px]">
                   Projects <br /> Completed
@@ -68,8 +69,7 @@ const About = () => {
 
               <div>
                 <div className="text-[40px] font-tertiary text-gradient mb-2">
-                  {inView ? <CountUp start={0} end={10} duration={3} /> : null}
-                  +k
+                  {inView ? <CountUp start={0} end={10} duration={3} /> : null}+
                 </div>
                 <div className="font-primary text-sm tracking-[2px]">
                   Satisfied <br /> Clients
@@ -78,7 +78,12 @@ const About = () => {
             </div>
 
             <div className="flex gap-x-8 items-center">
-              <button className="btn btn-lg">Contact me</button>
+              <Link
+                to="contact"
+                className="btn btn-lg flex justify-center items-center"
+              >
+                Contact me
+              </Link>
               <a href="#" className="text-gradient text-link">
                 {" "}
                 My Portfolio

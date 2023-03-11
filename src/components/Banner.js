@@ -1,15 +1,21 @@
 import React from "react";
 
 //images import here
-import Image from "../assets/avatar.svg";
+import Image from "../assets/avatar3.png";
 //Icons Import here
-import { FaGithub, FaYoutube, FaDribbble } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitterSquare,
+  FaFacebookSquare,
+} from "react-icons/fa";
 //type image animation
 import { TypeAnimation } from "react-type-animation";
 //motion
 import { motion } from "framer-motion";
 //variants
 import { fadeIn } from "../variants";
+import { Link } from "react-scroll";
 const Banner = () => {
   return (
     <section
@@ -25,7 +31,7 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="text-[55px] font-bold leading-[0.8] lg:text-[110px]"
+              className="text-[55px] font-bold leading-[0.8] lg:text-[80px]"
             >
               Monirul <span>Islam</span>
             </motion.h1>
@@ -34,7 +40,7 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="mb-6 text-[36px] lg:text-[45px] font-secondary font-semibold uppercase leading-[1]"
+              className="mb-6 mt-5 text-[25px] lg:text-[30px] font-secondary font-semibold uppercase leading-[1]"
             >
               <span className="mr-4">I am a</span>
               <TypeAnimation
@@ -59,9 +65,8 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="mb-8 max-w-lg mx-auto lg:mx-0"
             >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Blanditiis corrupti perferendis at non quas sed libero debitis,
-              reprehenderit quibusdam.
+              I am a quick learner and am always eager to expand my skill set
+              and stay up-to-date with the latest technologies.
             </motion.p>
             <motion.div
               variants={fadeIn("up", 0.7)}
@@ -70,10 +75,13 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0"
             >
-              <button className="btn btn-lg">Contact Me</button>
-              <a className="text-gradient btn-link" href="#">
-                My Portfolio
-              </a>
+              <Link
+                to="contact"
+                className="btn btn-lg flex justify-center items-center cursor-pointer"
+              >
+                Contact Me
+              </Link>
+              <button className="text-gradient btn-link">My Portfolio</button>
             </motion.div>
             {/* social link */}
             <motion.div
@@ -83,14 +91,33 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0"
             >
-              <a href="#">
-                <FaYoutube />
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/monirul99/"
+                rel="noreferrer"
+              >
+                <FaLinkedin />
               </a>
-              <a href="#">
+              <a
+                target="_blank"
+                href="https://github.com/monirul-99"
+                rel="noreferrer"
+              >
                 <FaGithub />
               </a>
-              <a href="#">
-                <FaDribbble />
+              <a
+                target="_blank"
+                href="https://twitter.com/MsMonirul"
+                rel="noreferrer"
+              >
+                <FaTwitterSquare />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.facebook.com/moniru.pro"
+                rel="noreferrer"
+              >
+                <FaFacebookSquare />
               </a>
             </motion.div>
           </div>

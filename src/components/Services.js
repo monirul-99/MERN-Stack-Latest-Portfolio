@@ -5,31 +5,32 @@ import { BsArrowUpRight } from "react-icons/bs";
 import { motion } from "framer-motion";
 //variant
 import { fadeIn } from "../variants";
+import { Link } from "react-scroll";
 
 // service Data
 const serviceData = [
   {
-    name: "Shop Ex Website",
+    name: "Web Development",
     description:
-      "I have experience building web applications using the MERN stack, including knowledge of MongoDB, Express.js, React.js Redux JS, and Node.js.",
+      "Designs, builds and maintains websites and web applications using programming languages and web frameworks.",
     link: "learn more",
   },
   {
-    name: "Brands Plants Website",
+    name: "Front End Developer",
     description:
-      "I have experience building web applications using the MERN stack, including knowledge of MongoDB, Express.js, React.js Redux JS, and Node.js.",
+      "Specializes in creating and interactive elements of websites and web applications using HTML, CSS and JavaScript.",
     link: "learn more",
   },
   {
-    name: "Communication Website",
+    name: "MERN Stack Developer",
     description:
-      "I have experience building web applications using the MERN stack, including knowledge of MongoDB, Express.js, React.js Redux JS, and Node.js.",
+      "Uses a combination of MongoDB, Express, React, and Node.js to create full-stack web applications with JavaScript.",
     link: "learn more",
   },
   {
-    name: "RealTime Chat Website",
+    name: "Full Stack Developer",
     description:
-      "I have experience building web applications using the MERN stack, including knowledge of MongoDB, Express.js, React.js Redux JS, and Node.js.",
+      "Responsible for developing both the front-end and back-end of web applications, using a combination of programming languages, databases, and web frameworks.",
     link: "learn more",
   },
 ];
@@ -46,13 +47,22 @@ const Services = () => {
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1 lg:bg-services lg:bg-no-repeat mix-blend-lighten mb-12 lg:mb-0"
           >
-            <h2 className="h2 text-accent mb-6">What I Do</h2>
-            <h3 className="h3 max-w-[455px] mb-16">
-              I have experience building web applications using the MERN
-              stack,including knowledge of MongoDB, Express.js, React.js Redux
-              JS, and Node.js.
-            </h3>
-            <button className="btn btn-sm">See My Works</button>
+            <div className="h-full flex flex-col justify-end -mt-20">
+              <h2 className="h2 text-accent mb-6">What I Do</h2>
+              <h3 className="font-primary font-semibold text-[18px] leading-[36px] max-w-[455px] mb-16">
+                I have experience building web applications using the MERN
+                stack,including knowledge of MongoDB, Express.js, React.js Redux
+                JS, and Node.js.
+              </h3>
+              <Link
+                to="work"
+                smooth={true}
+                spy={true}
+                className="btn btn-sm w-56 flex justify-center items-center cursor-pointer"
+              >
+                See My Works
+              </Link>
+            </div>
           </motion.div>
 
           <motion.div
@@ -66,7 +76,7 @@ const Services = () => {
               const { name, description, link } = service;
               return (
                 <div
-                  className="border-b border-white/20 h-[146px] mb-[38px] flex"
+                  className="border-b border-white/20 h-[146px] mb-[20px] flex"
                   key={index}
                 >
                   <div className="max-w-[476px]">
@@ -91,7 +101,6 @@ const Services = () => {
                 </div>
               );
             })}
-            service
           </motion.div>
         </div>
       </div>

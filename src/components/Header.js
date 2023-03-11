@@ -1,7 +1,10 @@
 import React from "react";
 
 //images import here
-import Logo from "../assets/logo.svg";
+import Logo from "../assets/logo.png";
+
+//icons
+import { BsDownload } from "react-icons/bs";
 
 const Header = () => {
   return (
@@ -9,10 +12,12 @@ const Header = () => {
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <a href="#">
-            <img src={Logo} alt="" />
+            <img className="w-32" src={Logo} alt="" />
           </a>
 
-          <button className="btn btn-sm">work with me</button>
+          <button className="btn btn-sm w-36 flex justify-between items-center">
+            <p>Resume</p> <BsDownload size={16} />
+          </button>
         </div>
       </div>
     </header>
