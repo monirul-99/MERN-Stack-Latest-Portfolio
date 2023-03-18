@@ -17,8 +17,9 @@ const Header = () => {
           </Link>
 
           <a
-            href="Monirul_Islam_Resume.pdf"
-            download
+            href="https://drive.google.com/file/d/1TNoZZ2BwYg-4USwr3uxjDwWGJ-nWwnw_/view?usp=share_link"
+            rel="noreferrer"
+            target="_blank"
             className="btn btn-sm w-36 flex justify-between items-center"
           >
             <p>Resume</p> <BsDownload size={16} />
