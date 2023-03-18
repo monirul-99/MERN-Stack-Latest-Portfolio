@@ -17,14 +17,14 @@ const About = () => {
   return (
     <section id="about" className="section mb-24 lg:mb-0" ref={ref}>
       <div className="container mx-auto">
-        <div className="flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-x-20  lg:h-screen">
           {/* img area */}
           <motion.div
             variants={fadeIn("right", 0.3)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 bg-about bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top"
+            className="flex-1 lg:bg-about lg:bg-contain bg-no-repeat lg:h-[640px] mix-blend-lighten bg-top"
           ></motion.div>
           {/* text area */}
           <motion.div
@@ -80,7 +80,7 @@ const About = () => {
             <div className="flex gap-x-8 items-center">
               <Link
                 to="contact"
-                className="btn btn-lg flex justify-center items-center"
+                className="btn btn-lg flex justify-center items-center cursor-pointer"
               >
                 Contact me
               </Link>

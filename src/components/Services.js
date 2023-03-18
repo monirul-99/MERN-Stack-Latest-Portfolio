@@ -32,6 +32,7 @@ const serviceData = [
     description:
       "Responsible for developing both the front-end and back-end of web applications, using a combination of programming languages, databases, and web frameworks.",
     link: "learn more",
+    borderX: "none",
   },
 ];
 const Services = () => {
@@ -73,10 +74,12 @@ const Services = () => {
             className="flex-1"
           >
             {serviceData.map((service, index) => {
-              const { name, description, link } = service;
+              const { name, description, link, borderX } = service;
               return (
                 <div
-                  className="border-b border-white/20 h-[146px] mb-[20px] flex"
+                  className={`border-b border-white/20 h-[160px] lg:h-[150px] mb-[20px] flex ${
+                    borderX ? "border-none" : null
+                  }`}
                   key={index}
                 >
                   <div className="max-w-[476px]">
