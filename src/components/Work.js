@@ -53,9 +53,7 @@ const Work = () => {
               </div>
               {/* title */}
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">
-                  BRAND PLANTS -Website
-                </span>
+                <span className="text-3xl text-white">BRAND PLANTS</span>
               </div>
             </div>
           </motion.div>
@@ -82,7 +80,7 @@ const Work = () => {
               </div>
               {/* title */}
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">SHOP EX -Website</span>
+                <span className="text-3xl text-white">SHOP EX</span>
               </div>
             </div>
             {/* images3 */}
@@ -97,15 +95,11 @@ const Work = () => {
               />
               {/* pre title */}
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                <span className="text-gradient">
-                  Wedding Photography Platform
-                </span>
+                <span className="text-gradient">Photography Platform</span>
               </div>
               {/* title */}
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">
-                  Wedding Colors -Website
-                </span>
+                <span className="text-3xl text-white">Wedding Colors</span>
               </div>
             </div>
           </motion.div>

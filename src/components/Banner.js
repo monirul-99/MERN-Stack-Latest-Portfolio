@@ -31,7 +31,7 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="text-[55px] font-bold leading-[0.8] lg:text-[80px]"
+              className="text-[55px] font-bold leading-[0.8] lg:text-[80px] -mt-7 lg:-mt-0"
             >
               Monirul <span>Islam</span>
             </motion.h1>
@@ -40,7 +40,7 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="mb-6 mt-5 text-[25px] lg:text-[30px] font-secondary font-semibold uppercase leading-[1]"
+              className="mb-6 mt-5 text-[23px] lg:text-[30px] font-secondary font-semibold uppercase leading-[1]"
             >
               <span className="mr-4">I am a</span>
               <TypeAnimation
@@ -89,7 +89,7 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0"
+              className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0 -mt-5 lg:-mt-0"
             >
               <a
                 target="_blank"
